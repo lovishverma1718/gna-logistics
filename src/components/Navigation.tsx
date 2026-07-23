@@ -58,7 +58,7 @@ export const Navigation: React.FC<NavigationProps> = ({ onOpenQuote }) => {
               <img
                 src={IMAGES.logo}
                 alt="GNA Logistics Logo"
-                className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 scale-[1.85] sm:scale-[2.1] origin-left"
+                className="h-12 sm:h-14 w-auto object-contain transition-transform duration-300 group-hover:scale-105 scale-[2.8] sm:scale-[3.15] origin-left"
               />
             </NavLink>
 
