@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: auto; /* Handled by Lenis */
+    font-family: 'Inter', sans-serif;
+  }
+
+  h1, h2, h3, h4, .font-serif {
+    font-family: 'Inter', sans-serif;
+  }
+
+  .font-instrument {
+    font-family: 'Instrument Serif', serif;
+  }
+}
+
+/* Custom Glassmorphism & Enterprise UI Components */
+.glass-nav {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(229, 231, 235, 0.6);
+}
+
+.glass-nav-scrolled {
+  background: rgba(255, 255, 255, 0.92);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(11, 45, 91, 0.12);
+  box-shadow: 0 12px 35px rgba(11, 45, 91, 0.08);
+}
+
+.glass-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+}
+
+.glass-card-dark {
+  background: rgba(11, 45, 91, 0.75);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Enterprise Shadow Effects */
+.shadow-enterprise {
+  box-shadow: 0 20px 40px -15px rgba(11, 45, 91, 0.07), 0 0 1px rgba(11, 45, 91, 0.1);
+}
+
+.shadow-enterprise-hover {
+  transition: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+.shadow-enterprise-hover:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 30px 60px -20px rgba(11, 45, 91, 0.14), 0 0 1px rgba(245, 130, 32, 0.3);
+}
+
+/* Lenis Scroll Smooth CSS */
+html.lenis, html.lenis body {
+  height: auto;
+}
+
+.lenis.lenis-smooth {
+  scroll-behavior: auto !important;
+}
+
+.lenis.lenis-smooth [data-lenis-prevent] {
+  overscroll-behavior: contain;
+}
+
+.lenis.lenis-stopped {
+  overflow: hidden;
+}
+
+.lenis.lenis-smooth iframe {
+  pointer-events: none;
+}
+
+/* Subtle Shimmer for High-End Cards */
+@keyframes shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+.animate-shimmer {
+  animation: shimmer 2.5s infinite;
+}
+
+/* Hide scrollbar for clean UI where needed */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
